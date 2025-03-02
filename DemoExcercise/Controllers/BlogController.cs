@@ -39,7 +39,9 @@ public class BlogController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(BlogPost model, IFormFile? bannerImage)
     {
-        await _blogService.CreateBlogPost(model, bannerImage, User);
+        var result = await _blogService.CreateBlogPost(model, bannerImage, User);
+
+        if (!result) return RedirectToAction("Create", result);
 
         return RedirectToAction("Index");
     }

@@ -8,8 +8,10 @@
     <br/>
 
     <label>Banner Image</label>
-    <input type="file" name="bannerImage" asp-for="BannerImagePath" class="form-control" required/>
+    <input type="file" name="bannerImage" id="bannerImage" asp-for="BannerImagePath" class="form-control" required accept=".jpg, .jpeg, .png, .gif"/>
+    <small class="text-muted">Only JPG, PNG, and GIF. Max size: 5MB</small>
     <span asp-validation-for="BannerImagePath" class="text-danger"></span>
+    <span id="fileError" class="text-danger"></span>
     <br/>
 
     <label>Content</label>
@@ -28,7 +30,22 @@
                plugins: 'lists link image table code',
                toolbar: 'undo redo | bold italic | bullist numlist | link image | code',
                height: 300
-           });        
+           }); 
+           
+           document.getElementById("bannerImage").addEventListener("change", function () {
+               var file = this.files[0];
+               var maxSize = 5 * 1024 * 1024; // 5MB
+       
+               if (file) {
+                   if (file.size > maxSize) {
+                       document.getElementById("fileError").innerText = "File size must be less than 5MB.";
+                       document.getElementById("submitBtn").disabled = true;
+                   } else {
+                       document.getElementById("fileError").innerText = "";
+                       document.getElementById("submitBtn").disabled = false;
+                   }
+               }
+           });
     });
 </script>
 

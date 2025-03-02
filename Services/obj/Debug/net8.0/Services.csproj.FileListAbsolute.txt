@@ -15,3 +15,4 @@ D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Modul
 D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Modules.pdb
 D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.csproj.Up2Date
 D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.genruntimeconfig.cache
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.sourcelink.json

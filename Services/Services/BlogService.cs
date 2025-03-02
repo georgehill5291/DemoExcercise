@@ -29,6 +29,13 @@ public class BlogService(
 
     public async Task<bool> EditBlogPost(int id, BlogPost post, IFormFile? bannerImage, ClaimsPrincipal User)
     {
+        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+        var extension = Path.GetExtension(bannerImage.FileName).ToLower();
+        if (!allowedExtensions.Contains(extension)) return false;
+
+        // Validate file size (max 5MB)
+        if (bannerImage.Length > 5 * 1024 * 1024) return false;
+
         var existingPost = await context.BlogPosts.FindAsync(id);
         if (existingPost == null) return false;
 
@@ -61,6 +68,14 @@ public class BlogService(
 
     public async Task<bool> CreateBlogPost(BlogPost blogPost, IFormFile? bannerImage, ClaimsPrincipal User)
     {
+        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+        var extension = Path.GetExtension(bannerImage.FileName).ToLower();
+        if (!allowedExtensions.Contains(extension)) return false;
+
+        // Validate file size (max 5MB)
+        if (bannerImage.Length > 5 * 1024 * 1024) return false;
+
+
         // Handle Banner Image Upload
         if (bannerImage != null && bannerImage.Length > 0)
         {

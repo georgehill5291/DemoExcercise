@@ -294,3 +294,4 @@ D:\George\Worksplace\NET8 Learning\DemoExcercise\DemoExcercise\bin\Debug\net8.0\
 D:\George\Worksplace\NET8 Learning\DemoExcercise\DemoExcercise\bin\Debug\net8.0\Services.dll
 D:\George\Worksplace\NET8 Learning\DemoExcercise\DemoExcercise\bin\Debug\net8.0\Modules.pdb
 D:\George\Worksplace\NET8 Learning\DemoExcercise\DemoExcercise\bin\Debug\net8.0\Services.pdb
+D:\George\Worksplace\NET8 Learning\DemoExcercise\DemoExcercise\obj\Debug\net8.0\DemoExcercise.sourcelink.json
