@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Modules.Entities.BlogPost
+<h2>Create Post</h2>
+<form asp-action="Create" method="post" enctype="multipart/form-data" id="Create">
+    <label>Title</label>
+    <input asp-for="Title" class="form-control" required/>
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br/>
+
+    <label>Banner Image</label>
+    <input type="file" name="bannerImage" asp-for="BannerImagePath" class="form-control" required/>
+    <span asp-validation-for="BannerImagePath" class="text-danger"></span>
+    <br/>
+
+    <label>Content</label>
+    <textarea asp-for="Content" class="form-control wysiwyg-editor"></textarea>
+    <span asp-validation-for="Content" class="text-danger"></span>
+
+    <br/>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+
+<script>
+    // WYSIWYG Editor Initialization
+    document.addEventListener("DOMContentLoaded", function() {
+           tinymce.init({
+               selector: '.wysiwyg-editor',
+               plugins: 'lists link image table code',
+               toolbar: 'undo redo | bold italic | bullist numlist | link image | code',
+               height: 300
+           });        
+    });
+</script>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

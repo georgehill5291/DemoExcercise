@@ -1,0 +1,17 @@
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Services.deps.json
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Services.dll
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Services.pdb
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.dll
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\refint\Services.dll
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.pdb
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\ref\Services.dll
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Services.runtimeconfig.json
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Modules.dll
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\bin\Debug\net8.0\Modules.pdb
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.csproj.Up2Date
+D:\George\Worksplace\NET8 Learning\DemoExcercise\Services\obj\Debug\net8.0\Services.genruntimeconfig.cache

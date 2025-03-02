@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Modules.Entities.BlogPost
+<h2>Delete Post</h2>
+<p>Are you sure you want to delete this post?</p>
+<p>
+    <strong>@Model.Title</strong>
+</p>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id"/>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+<script>
+    // WYSIWYG Editor Initialization
+    document.addEventListener("DOMContentLoaded", function() {
+        $('.wysiwyg-editor').summernote();
+    });
+</script>

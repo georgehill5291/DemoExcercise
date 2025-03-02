@@ -1,0 +1,66 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Modules.Entities.BlogPost
+
+<h2>Edit Blog Post</h2>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id"/>
+
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control"/>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Current Banner Image</label><br>
+        @if (!string.IsNullOrEmpty(Model.BannerImagePath))
+        {
+            <img src="@Model.BannerImagePath" alt="Banner Image" width="200"/>
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Upload New Banner Image</label>
+        <input type="file" name="bannerImage" class="form-control "/>
+        <span asp-validation-for="BannerImagePath" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <textarea asp-for="Content" class="form-control wysiwyg-editor"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="form-group">
+            <label asp-for="Status"></label>
+            <select asp-for="Status" class="form-control">
+                <option value="Draft">Draft</option>
+                <option value="Published">Published</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+    }
+    <br/>
+    <button type="submit" class="btn btn-primary">Update Post</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+<script>
+    // WYSIWYG Editor Initialization
+    document.addEventListener("DOMContentLoaded", function() {
+           tinymce.init({
+               selector: '.wysiwyg-editor',
+               plugins: 'lists link image table code',
+               toolbar: 'undo redo | bold italic | bullist numlist | link image | code',
+               height: 300
+           });        
+    });
+</script>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
