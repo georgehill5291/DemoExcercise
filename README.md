@@ -20,7 +20,7 @@
 
 ### Flow
 - User: Amin
-- Credential: admin@example.com / dev123@
+- Credential: admin@example.com / Admin@123
 ```
 Create and Delete users
 Approve and Reject blog posts
